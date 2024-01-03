@@ -1,0 +1,9 @@
+<div style="text-align: center;">
+    <div id="timer">{{ timeInSeconds | formatTimer }} </div>
+    <div id="buttons">
+        <button id="startBtn" (click)="startTimer()" [disabled]="!isStart">Start</button>
+        <button id="pauseBtn" (click)="pauseTimer()" [disabled]="!isPause">Pause</button>
+        <button id="resumeBtn" (click)="resumeTimer()" [disabled]="!isResume">Resume</button>
+        <button id="resetBtn" (click)="resetTimer()" [disabled]="!isReset">Reset</button>
+    </div>
+</div>
