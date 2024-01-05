@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { TimerComponent } from './timer/timer.component';
-import { RouterModule } from '@angular/router';
-import { routes } from './app.routes';
+import { AppRoutingModule } from './app-routing-module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,10 +12,9 @@ import { routes } from './app.routes';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, { useHash: true })
+    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  exports: [RouterModule]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
